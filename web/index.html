@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro de Medalhas - Olimpíadas</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="assets/img/olimpic-logo.png" alt="Logo das Olimpíadas" class="logo">
+            <div class="theme-toggle">
+                <button id="toggle-light" class="fas fa-sun"></button>
+                <button id="toggle-dark" class="fas fa-moon"></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="medal-table-section">
+            <h1>Medalhas por País</h1>
+            <div class="select-container">
+                <label for="select-country">Selecione um país:</label>
+                <select id="select-country"></select>
+            </div>
+            <div class="country-details">
+                <div id="medal-table" class="medal-table"></div>
+                <div id="country-flag" class="country-flag"></div>
+            </div>
+        </section>
+        <section class="top-10-section">
+            <h2>Top 10 Países por Medalhas</h2>
+            <div class="select-container">
+                <label for="select-ranking">Ordenar por:</label>
+                <select id="select-ranking">
+                    <option value="rank">Ranking Oficial</option>
+                    <option value="rank_total_medals">Ranking por Total de Medalhas</option>
+                </select>
+            </div>
+            <table id="medal-table-top-10" class="medal-table">
+                <thead>
+                    <tr>
+                        <th>Bandeira</th>
+                        <th>País</th>
+                        <th>Ouro</th>
+                        <th>Prata</th>
+                        <th>Bronze</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="medal-table-top-10-body"></tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span> Desenvolvido por <a class="dev" href="https://www.linkedin.com/in/wesley-batista-74b7a1198/" target="_blank">Wesley B. Santana</a></p>
+    </footer>
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</body>
+</html>
